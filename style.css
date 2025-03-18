@@ -5,11 +5,17 @@ body{
     width: 100%;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 @font-face {
     font-family: myFirstFont;
     src: url(sansation_light.woff);
+}
+
+@font-face {
+    font-family: Helvetica;
+    src: url(fonts/HelveticaNeueLight.otf);
 }
 
 .top{
@@ -37,17 +43,19 @@ body{
 }
 
 .contacts{
-    display: flex;
-    align-items: center;
+    display: flex; 
     justify-content: space-between;
     width: 80%;
     margin: 20px auto;
+    display: flex;
+    margin: 0 auto;
+   
 
-    .contact{
-        /* /* display: flex; */
+    .email, .phone{
+        display: flex; 
         align-items: center;
         gap: 20px;
-        width: 50%; 
+        /* width: 50%;  */
 
         i{
             font-size: 30px;
@@ -65,12 +73,7 @@ body{
                     font-weight: 400;
                 }
 
-        }
-
-        #phone{
-            /* justify-content: flex-end; */
-            margin-left: auto;
-        }
+        }      
         
     }
 
@@ -268,15 +271,27 @@ nav{
     .service-container{
         display: flex;
         gap: 3%;
-        padding: 30px 10px;
         text-align: center;
+        
 
         .service{
+            height: 400px;
+            width: 25%;
+            padding: 30px 10px;
+            background-color: #fff5f5;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
             img{
                 width: 100px;
                 height: 100px;
                 object-fit: contain;
                 box-shadow: 0 10px 10px grey;
+                border-radius: 50%;
+            }
+
+            a{
+                color: #F9A825;
+                text-decoration: none;
             }
         }
     }
@@ -286,6 +301,7 @@ nav{
         display: flex;
         justify-content: center;
         align-items: center;
+        margin: 10% 0;
 
         .vid{
             position: relative;
@@ -301,10 +317,11 @@ nav{
                 justify-content: center;
                 align-items: center;
                 width: 25%;
+                height: 200px;
                 
                 img {
                     width: 100%;
-                    height: auto;
+                    height: 100%;
                     display: block;
                     
                 }
@@ -332,8 +349,10 @@ nav{
     width: 80%;
     margin: 0 auto;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     position: relative;
+    justify-content: space-between;
+    gap: 10%;
 }
 
 .pricing .aside-image {
@@ -344,14 +363,14 @@ nav{
     align-items: flex-start;
     justify-content: center;
     padding: 50px;
-    height: 80vh;
+    height: 70vh;
 }
 
 .pricing .aside-image img {
     position: absolute;
     top: 0;
     left: 0;
-    width: 60%;
+    width: 80%;
     height: 60vh;
 }
 
@@ -359,13 +378,15 @@ nav{
     position: absolute;
     top: 20px;
     left: 20px;
-    color: white;
+    background-color: #fff;
+    color: black;
     font-weight: bold;
+    padding: 20px 30px;
 }
 
 .pricing .aside-image .get-started {
     position: absolute;
-    top: 60px;
+    bottom: 40px;
     left: 20px;
     color: white;
     text-decoration: underline;
@@ -373,13 +394,27 @@ nav{
 
 .pricing .why-us {
     width: 50%;
-    text-align: center;
+    /* text-align: center; */
     color: black;
+
+}
+
+.pricing .whys{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+
+    i{
+        background-color: #F9A825;
+        color: #fff;
+        border-radius: 50%;
+    }
 }
 
 .contact{
     width: 100%;
-    margin: 0 auto;
+    margin: 10% auto 0;
 
 
     .video-container{
@@ -493,67 +528,73 @@ nav{
     width: 80%;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    margin: 10% auto;
     text-align: center;
+}
 
-    .testimonies{
-        display: flex;
-        justify-content: space-between;
-        gap: 20px;
+.testimonies {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  
+}
 
-        .testimony{
-            position: relative;
-                background-color: white;
-                padding: 60px 20px 20px;
-                border-radius: 10px;
-                text-align: center;
-                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+.testimony {
+    position: relative;
+    background-color: white;
+    padding: 60px 20px 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 400px;     
+}
 
-            i{
-                padding: 10px;
-                border-radius: 50%;
-                color: #fff;
-                background-color: #1976D2;
-                font-size: 24px;
-            }
+.testimony  i {
+    padding: 10px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #1976D2;
+    font-size: 24px;
+}
 
-            img{
-                position: absolute;
-                top: -40px;
-                left: 50%;
-                transform: translateX(-50%);
-                width: 80px;
-                height: 80px;
-                border-radius: 50%;
-                object-fit: cover;
-                border: 3px solid white;
-            }
-        }
-    }
+.testimony img {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
 }
 
 .newsletter {
-    /* display: flex; */
+    display: block;
     justify-content: center;
     align-items: center;
     width: 80%;
-    margin: 50px auto;
+    margin: 0 auto 10%;
     text-align: center;
 }
 
 .newsletter form {
     display: flex;
     align-items: center;
-    border: 2px solid #1976D2;
+    /* border: 2px solid #1976D2; */
     border-radius: 5px;
     overflow: hidden;
+    width: 50%;
+    margin: 0 auto;
 }
 
 .newsletter input {
     border: none;
     padding: 10px;
-    outline: none;
-    width: 250px;
+    /* outline: none; */
+    width: 70%;
+    /* background-color: #444; */
 }
 
 .newsletter button {
@@ -562,6 +603,7 @@ nav{
     background-color: #F9A825;
     color: white;
     cursor: pointer;
+    width: 30%;
 }
 
 .news{
@@ -570,41 +612,53 @@ nav{
     justify-content: center;
     align-items: center;
     width: 80%;
-    margin: 0 auto;
+    margin: 0 auto 10%;
     text-align: center;
 }
 
+.news-items{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
 .news-item {
     position: relative;
-    width: 300px;
-    height: 200px;
+    background-image: url(images/people\ moving.jpg);
+    width: 350px;
+    height: 400px;
     background-size: cover;
     background-position: center;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    text-align: unset;
 }
 
+#image2{
+    background-image: url(images/istock\ .jpg);
+}
+
+#image3{
+    background-image: url(images/couple\ cheering.jpg);
+}
 .news-item .news-text {
     position: absolute;
-    top: 10px;
+    bottom: 10px;
     left: 10px;
     background: rgba(0, 0, 0, 0.5);
     padding: 5px 10px;
     border-radius: 5px;
 }
 
-.whole {
+.footer {
     font-family: Arial, sans-serif;
     width: 100%;
-}
-
-.footer {
     background-color: #222;
     color: #fff;
 }
+
+
 
 .footer-top {
     text-align: center;
@@ -614,12 +668,9 @@ nav{
     align-items: center;
     margin: 0 auto;
     justify-content: space-between;
+    width: 100%;
 }
 
-.footer-top h2 {
-    
-    
-}
 
 .discover-btn {
     /* margin-top: 10px; */
@@ -641,15 +692,14 @@ nav{
     display: flex;
     justify-content: space-around;
     padding: 20px;
-    height: 440px;
-    height: 420px;
+    height: auto;
 }
 
 .contact-info,
 .footer-links {
     flex-basis: 5%;
     margin-bottom: 20px;
-    margin-left: 250px;
+    /* margin-left: 250px; */
 }
 
 .social-media {
@@ -683,6 +733,14 @@ nav{
     color: #fff;
     display: inline-flex;
     font-size: 30px;
+    gap: 5px;
+    cursor: pointer;
+
+}
+
+.social-media i{
+    font-size: 20px;
+    gap: 10px;
 }
 
 #twitter {
@@ -694,7 +752,8 @@ nav{
 }
 
 .hr {
-    width: 600px
+    /* width: 600px */
+    width: 80%;
 }
 
 .copyright {
