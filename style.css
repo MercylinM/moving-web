@@ -18,6 +18,10 @@ body{
     src: url(fonts/HelveticaNeueLight.otf);
 }
 
+@font-face {
+    font-family: Poppins;
+    src: url(Poppins-Regular.ttf);
+}
 .top{
  background-color: black;
  width: 100%;
@@ -87,6 +91,7 @@ hr{
 
 h2{
     font-size: 2.8rem;
+    font-family: Helevetica;
 }
 
 .highlighted-p {
@@ -123,6 +128,7 @@ nav{
         top: 50%;
         display: flex;
         padding: 0 10%;
+        font-family: Poppins;
         
         i {
             border-radius: 50%;
@@ -662,7 +668,7 @@ nav{
 
 .footer-top {
     text-align: center;
-    padding: 40px 0;
+    padding: 40px 200px;
     background-color: #F9AA33;
     display: flex;
     align-items: center;
@@ -693,6 +699,7 @@ nav{
     justify-content: space-around;
     padding: 20px;
     height: auto;
+    margin: 0 auto 5%;
 }
 
 .contact-info,
@@ -728,10 +735,13 @@ nav{
     text-decoration: underline;
 }
 
+.social-media{
+    display: flex;
+    gap: 10px;
+}
+
 .social-media a {
-    /* margin-right: 30px; */
     color: #fff;
-    display: inline-flex;
     font-size: 30px;
     gap: 5px;
     cursor: pointer;
@@ -752,12 +762,29 @@ nav{
 }
 
 .hr {
-    /* width: 600px */
     width: 80%;
+}
+
+.top-icon i{
+    color: #fff;
+    background-color: #F9AA33;
+    font-size: 30px;
+    font-weight: 900;
+    padding: 20px;
+    border-radius: 50%;
+    position: absolute;
+    right: 10%;
+    cursor: pointer;
+}
+
+.top-icon{
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
 .copyright {
     text-align: center;
     padding: 10px;
-    background-color: #111;
+    padding-bottom: 5%;
 }
